@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AImage - 工业视觉检测平台</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;700&display=swap');
+        body { font-family: 'Noto Sans SC', sans-serif; }
+        .hero-gradient { background: linear-gradient(135deg, #0f172a 0%, #1e40af 100%); }
+        .tech-card:hover { border-color: #3b82f6; transform: translateY(-4px); transition: all 0.3s; }
+    </style>
+</head>
+<body class="bg-slate-50">
+
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        <div class="text-2xl font-bold text-blue-900">AImage <span class="text-blue-500 text-sm font-normal">工业级视觉平台</span></div>
+        <div class="space-x-6 text-gray-600 font-medium text-sm overflow-x-auto flex">
+            <a href="#problem" class="hover:text-blue-600 whitespace-nowrap">市场机会</a>
+            <a href="#business" class="hover:text-blue-600 whitespace-nowrap">竞品分析</a>
+            <a href="#model" class="hover:text-blue-600 whitespace-nowrap">商业模式</a>
+            <a href="#traction" class="hover:text-blue-600 whitespace-nowrap">成果验证</a>
+            <a href="#roadmap" class="hover:text-blue-600 whitespace-nowrap">发展规划</a>
+            <a href="#tech" class="hover:text-blue-600 whitespace-nowrap">技术方案</a>
+            <a href="team.html" class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition whitespace-nowrap">核心团队</a>
+        </div>
+    </div>
+</nav>
+
+    <section class="hero-gradient text-white py-24 px-6">
+        <div class="max-w-5xl mx-auto text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">AImage：中小制造企业可负担的工业AI质检系统</h1>
+            <p class="text-xl opacity-80 mb-10">解决高反光、大平面、高速运动场景下的微米级缺陷检测难题</p>
+            <div class="flex justify-center gap-4">
+                <span class="px-6 py-2 bg-blue-500 rounded-full font-bold">对标德国 Halcon</span>
+                <span class="px-6 py-2 bg-white/10 border border-white/20 rounded-full font-bold">100% 自研国产替代</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="problem" class="py-20 max-w-7xl mx-auto px-6">
+        <div class="mb-20">
+            <h2 class="text-3xl font-bold text-center mb-6">巨大的市场机会：工业质检AI市场</h2>
+            <p class="text-center text-gray-600 max-w-3xl mx-auto mb-12">全球工业视觉检测市场规模已突破 800 亿人民币。传统非 AI 方案占 90%+，泛化能力弱；AI 视觉占比虽低但增速 4 倍于传统技术，是千亿级蓝海机会。</p>
+            
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-4 mb-8">
+                <div class="bg-blue-50 p-4 rounded-lg text-center border border-blue-200">
+                    <p class="text-xs text-gray-500 mb-1">电子行业</p>
+                    <p class="text-lg font-bold text-blue-900">PCB/芯片</p>
+                </div>
+                <div class="bg-orange-50 p-4 rounded-lg text-center border border-orange-200">
+                    <p class="text-xs text-gray-500 mb-1">汽车行业</p>
+                    <p class="text-lg font-bold text-orange-900">焊点/涂装</p>
+                </div>
+                <div class="bg-green-50 p-4 rounded-lg text-center border border-green-200">
+                    <p class="text-xs text-gray-500 mb-1">机械行业</p>
+                    <p class="text-lg font-bold text-green-900">表面缺陷</p>
+                </div>
+                <div class="bg-red-50 p-4 rounded-lg text-center border border-red-200">
+                    <p class="text-xs text-gray-500 mb-1">食品行业</p>
+                    <p class="text-lg font-bold text-red-900">包装检测</p>
+                </div>
+                <div class="bg-purple-50 p-4 rounded-lg text-center border border-purple-200">
+                    <p class="text-xs text-gray-500 mb-1">其他行业</p>
+                    <p class="text-lg font-bold text-purple-900">+5大行业</p>
+                </div>
+            </div>
+
+            <div class="bg-gray-50 p-8 rounded-xl border border-gray-200">
+                <p class="text-sm text-gray-600 mb-4 font-semibold">现状痛点：</p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="flex gap-3">
+                        <span class="text-red-500 text-xl">⚠</span>
+                        <div>
+                            <p class="font-semibold text-gray-800">低效率</p>
+                            <p class="text-sm text-gray-600">大量检测环节仍依赖人工，效率低下</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-3">
+                        <span class="text-red-500 text-xl">⚠</span>
+                        <div>
+                            <p class="font-semibold text-gray-800">不稳定</p>
+                            <p class="text-sm text-gray-600">标准不一致、漏检率高达 15-30%</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-3">
+                        <span class="text-red-500 text-xl">⚠</span>
+                        <div>
+                            <p class="font-semibold text-gray-800">成本高</p>
+                            <p class="text-sm text-gray-600">进口视觉系统价格虚高 10 倍 +</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="text-3xl font-bold text-center mb-12">AImage 核心竞争优势</h2>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="text-center p-6 bg-white rounded-xl shadow-md border-t-4 border-blue-500">
+                <div class="w-16 h-16 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl"><i class="fas fa-bolt"></i></div>
+                <h3 class="font-bold mb-2">高速运动</h3>
+                <p class="text-gray-500 text-sm">生产线高速运行下的图像采集模糊</p>
+                <p class="text-blue-600 text-sm font-semibold mt-3">✓ <45ms 延迟</p>
+            </div>
+            <div class="text-center p-6 bg-white rounded-xl shadow-md border-t-4 border-yellow-500">
+                <div class="w-16 h-16 bg-yellow-100 text-yellow-600 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl"><i class="fas fa-sun"></i></div>
+                <h3 class="font-bold mb-2">强高反光</h3>
+                <p class="text-gray-500 text-sm">金属/玻璃表面光影干扰</p>
+                <p class="text-blue-600 text-sm font-semibold mt-3">✓ 消除 99% 杂光</p>
+            </div>
+            <div class="text-center p-6 bg-white rounded-xl shadow-md border-t-4 border-purple-500">
+                <div class="w-16 h-16 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl"><i class="fas fa-search-plus"></i></div>
+                <h3 class="font-bold mb-2">微小缺陷</h3>
+                <p class="text-gray-500 text-sm">像素级瑕疵难以捕捉</p>
+                <p class="text-blue-600 text-sm font-semibold mt-3">✓ 微米级清晰度</p>
+            </div>
+            <div class="text-center p-6 bg-white rounded-xl shadow-md border-t-4 border-green-500">
+                <div class="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl"><i class="fas fa-arrows-alt"></i></div>
+                <h3 class="font-bold mb-2">超大平面</h3>
+                <p class="text-gray-500 text-sm">1.5米宽幅面的一致性检测</p>
+                <p class="text-blue-600 text-sm font-semibold mt-3">✓ 1.5m 全覆盖</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="tech" class="py-20 bg-slate-900 text-white px-6">
+    <div class="max-w-7xl mx-auto"> <div class="text-center mb-12">
+            <h2 class="text-4xl font-bold mb-4">颠覆性的成像效果对比</h2>
+            <p class="text-gray-400 max-w-2xl mx-auto">针对高反光、强干扰环境，AImage 方案通过定制光学设计，实现了从“看不清”到“像素级还原”的质变。</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <div class="space-y-4">
+                <div class="relative group overflow-hidden rounded-2xl border border-white/10 bg-black/20">
+                    <img src="images\normal_plan.jpg" alt="常规面阵成像" class="w-full h-96 object-contain opacity-50 grayscale transition duration-700">
+                    <div class="absolute top-6 left-6 bg-gray-800/80 backdrop-blur-md text-white px-4 py-2 rounded-lg border border-white/20">
+                        <span class="text-sm font-bold tracking-widest uppercase">常规面阵方案</span>
+                    </div>
+                    <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                        <p class="text-gray-500 text-lg italic">画面重影、细节丢失</p>
+                    </div>
+                </div>
+                <div class="bg-slate-800/50 p-4 rounded-xl">
+                    <p class="text-gray-400 text-sm"><i class="fas fa-times-circle text-red-500 mr-2"></i>痛点：由于金属表面高反光，常规相机无法捕捉细微纹理，异常点被环境光遮盖。</p>
+                </div>
+            </div>
+
+            <div class="space-y-4">
+                <div class="relative group overflow-hidden rounded-2xl border-2 border-blue-500 shadow-[0_0_30px_rgba(59,130,246,0.2)]">
+                    <img src="images\aimage_plan.jpg" alt="AImage 线阵成像" class="w-full h-96 object-contain transition duration-700 transform group-hover:scale-105">
+                    <div class="absolute top-6 right-6 bg-blue-600 text-white px-4 py-2 rounded-lg font-bold shadow-lg">
+                        AImage 线阵方案
+                    </div>
+                    <div class="absolute bottom-6 left-6 bg-black/60 backdrop-blur-md px-4 py-2 rounded-lg">
+                        <p class="text-blue-400 font-bold text-sm">连指纹都能清晰可见</p>
+                    </div>
+                </div>
+                <div class="bg-blue-900/20 p-4 rounded-xl border border-blue-500/30">
+                    <p class="text-blue-200 text-sm"><i class="fas fa-check-circle text-green-400 mr-2"></i>优势：自研光学模组消除 99% 杂光干扰，提供微米级清晰度，为后续 AI 算法提供极致输入。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="software" class="py-20 bg-white px-6">
+    <div class="max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row items-center gap-16">
+            
+            <div class="md:w-1/2 relative">
+                <div class="absolute -inset-4 bg-blue-100/50 rounded-3xl -z-10 blur-2xl"></div>
+                <div class="bg-gray-800 rounded-2xl shadow-2xl overflow-hidden border-8 border-gray-800">
+                    <img src="images/software_ui.jpg" alt="AImage 软件界面" class="w-full h-auto object-cover">
+                </div>
+                <div class="absolute -bottom-6 -right-6 bg-white shadow-xl p-4 rounded-xl border border-blue-50">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs text-gray-500">检测速度</p>
+                            <p class="text-lg font-bold text-blue-900">&lt; 50ms</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="md:w-1/2 space-y-8">
+                <div>
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">AImage 工业视觉软件框架</h2>
+                    <p class="text-gray-600 leading-relaxed">
+                        基于国产化自研底层算法库，AImage 是一款专为高端制造设计的全流程视觉控制系统。它不仅是一个检测工具，更是集图像采集、算法分析、逻辑控制与数据看板于一体的工业大脑。
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div class="flex gap-4">
+                        <div class="text-blue-600 text-xl mt-1"><i class="fas fa-layer-group"></i></div>
+                        <div>
+                            <h4 class="font-bold text-gray-900">模块化架构</h4>
+                            <p class="text-sm text-gray-500">支持快速适配线阵、面阵等多种相机方案。</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <div class="text-blue-600 text-xl mt-1"><i class="fas fa-brain"></i></div>
+                        <div>
+                            <h4 class="font-bold text-gray-900">混合算法引擎</h4>
+                            <p class="text-sm text-gray-500">融合深度学习与传统视觉算法，优势互补。</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <div class="text-blue-600 text-xl mt-1"><i class="fas fa-shield-alt"></i></div>
+                        <div>
+                            <h4 class="font-bold text-gray-900">高稳定性</h4>
+                            <p class="text-sm text-gray-500">专为 24/7 工业产线设计，具备完善的容错处理。</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <div class="text-blue-600 text-xl mt-1"><i class="fas fa-chart-line"></i></div>
+                        <div>
+                            <h4 class="font-bold text-gray-900">国产替代</h4>
+                            <p class="text-sm text-gray-500">核心算法全自研，解决工业底层软件“卡脖子”难题。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <div class="pt-4">
+                    <button class="px-8 py-3 bg-slate-900 text-white rounded-full font-bold hover:bg-blue-600 transition shadow-lg">
+                        了解技术参数 <i class="fas fa-arrow-right ml-2"></i>
+                    </button>
+                </div> -->
+            </div>
+        </div>
+    <div class="mt-16 bg-slate-50 rounded-3xl p-8 border border-gray-100">
+        <div class="flex flex-col lg:flex-row items-center gap-12">
+            
+            <div class="lg:w-3/5">
+                <div class="bg-white p-4 rounded-2xl shadow-sm border border-gray-100">
+                    <div class="flex items-center justify-between mb-4 px-2">
+                        <h4 class="font-bold text-gray-800"><i class="fas fa-chart-line text-blue-600 mr-2"></i>实时推理性能分析 (Real-time Performance)</h4>
+                        <!-- <span class="text-xs text-gray-400">数据源：生产线实时监测</span> -->
+                    </div>
+                    <div class="overflow-hidden rounded-xl bg-gray-50 flex items-center justify-center border border-gray-50">
+                        <img src="images/aimage_performance.jpg" alt="AImage 性能指标图" class="w-full h-auto object-contain hover:scale-105 transition duration-500">
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:w-2/5 space-y-6">
+                <h3 class="text-2xl font-bold text-gray-900">卓越的运行效能</h3>
+                <p class="text-gray-500 text-sm">通过多线程并发架构与 TensorRT 加速引擎，AImage 实现了工业级的极速响应。</p>
+                
+                <div class="space-y-4">
+                    <div class="flex items-center justify-between p-4 bg-white rounded-xl shadow-sm">
+                        <span class="text-gray-600">单帧推理延迟</span>
+                        <span class="text-blue-600 font-bold">≤ 45ms</span>
+                    </div>
+                    <div class="flex items-center justify-between p-4 bg-white rounded-xl shadow-sm">
+                        <span class="text-gray-600">峰值吞吐量 (FPS)</span>
+                        <span class="text-blue-600 font-bold">60+</span>
+                    </div>
+                    <div class="flex items-center justify-between p-4 bg-white rounded-xl shadow-sm">
+                        <span class="text-gray-600">CPU/GPU 占用率</span>
+                        <span class="text-green-600 font-bold">优化降低 30%</span>
+                    </div>
+                </div>
+
+                <p class="text-xs text-gray-400 italic">注：以上数据基于 NVIDIA Jetson Orin / RTX 4060 平台测试得出。</p>
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
+
+
+    <section id="business" class="py-20 bg-blue-50 px-6">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-4 text-gray-900">竞品分析：为什么选择 AImage？</h2>
+            <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">与行业领先方案的全维度对标</p>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+                <div class="bg-white p-6 rounded-xl shadow-md border-l-4 border-red-500">
+                    <h3 class="text-lg font-bold mb-4 text-gray-900">康耐视 (美国)</h3>
+                    <div class="space-y-3 text-sm">
+                        <p class="text-gray-600"><span class="text-red-600 font-bold">✗ 价格虚高：</span> 整体采购与实施成本高 10 倍 +</p>
+                        <p class="text-gray-600"><span class="text-red-600 font-bold">✗ 响应慢：</span> 现场响应与本地化服务效率不足</p>
+                        <p class="text-gray-600"><span class="text-red-600 font-bold">✗ 定制难：</span> 系统重，难以快速适配国内工艺</p>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-md border-l-4 border-orange-500">
+                    <h3 class="text-lg font-bold mb-4 text-gray-900">思谋科技 (深圳)</h3>
+                    <div class="space-y-3 text-sm">
+                        <p class="text-gray-600"><span class="text-orange-600 font-bold">✗ 资金竞争：</span> 融资与市场投入力度大，边际效益递减</p>
+                        <p class="text-gray-600"><span class="text-orange-600 font-bold">✗ 碎片化：</span> 项目获取与利润空间面临挤压</p>
+                        <p class="text-gray-600"><span class="text-orange-600 font-bold">✗ 生态压力：</span> 对中小企业合作空间有限</p>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-2 bg-gradient-to-r from-green-50 to-blue-50 p-6 rounded-xl shadow-md border border-green-300">
+                    <h3 class="text-lg font-bold mb-4 text-green-900">AImage 的差异化机会</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+                        <div class="flex gap-3">
+                            <span class="text-green-600 font-bold text-lg">✓</span>
+                            <div>
+                                <p class="font-semibold text-gray-900">灵活的价格</p>
+                                <p class="text-gray-600">按需定价，让中小制造业也用得起</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-3">
+                            <span class="text-green-600 font-bold text-lg">✓</span>
+                            <div>
+                                <p class="font-semibold text-gray-900">本地化落地</p>
+                                <p class="text-gray-600">立足无锡/苏州，贴近客户现场</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-3">
+                            <span class="text-green-600 font-bold text-lg">✓</span>
+                            <div>
+                                <p class="font-semibold text-gray-900">快速迭代</p>
+                                <p class="text-gray-600">10分钟到24h，行业最快部署</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="model" class="py-20 max-w-7xl mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center mb-4 text-gray-900">多维度商业模式</h2>
+        <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">从软件到服务，多种收入模式确保可持续发展</p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- 模式1 -->
+            <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition border-t-4 border-blue-500">
+                <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                    <i class="fas fa-cube text-blue-600 text-xl"></i>
+                </div>
+                <h4 class="font-bold text-gray-900 mb-3">软件授权收费</h4>
+                <p class="text-sm text-gray-600 mb-4">按功能模块、部署规模和服务等级定价，满足不同阶段需求。</p>
+                <!-- <p class="text-xs text-gray-400">示范价格：基础版 5万/年 → 企业版 20万+/年</p> -->
+            </div>
+
+            <!-- 模式2 -->
+            <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition border-t-4 border-purple-500">
+                <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+                    <i class="fas fa-wrench text-purple-600 text-xl"></i>
+                </div>
+                <h4 class="font-bold text-gray-900 mb-3">技术服务收费</h4>
+                <p class="text-sm text-gray-600 mb-4">标注、训练、部署、评估的全流程技术支持，按项目收费。</p>
+                <!-- <p class="text-xs text-gray-400">示范价格：单个项目 10-50万</p> -->
+            </div>
+
+            <!-- 模式3 -->
+            <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition border-t-4 border-green-500">
+                <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+                    <i class="fas fa-toolbox text-green-600 text-xl"></i>
+                </div>
+                <h4 class="font-bold text-gray-900 mb-3">交钥匙全包</h4>
+                <p class="text-sm text-gray-600 mb-4">方案设计 + 软件交付 + 模型部署一站式服务。</p>
+                <!-- <p class="text-xs text-gray-400">示范价格：项目总价 30-100万+</p> -->
+            </div>
+
+            <!-- 模式4 -->
+            <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition border-t-4 border-orange-500">
+                <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
+                    <i class="fas fa-database text-orange-600 text-xl"></i>
+                </div>
+                <h4 class="font-bold text-gray-900 mb-3">数据与模型资产化</h4>
+                <p class="text-sm text-gray-600 mb-4">行业数据集与垂直模型库，持续降低交付成本。</p>
+                <!-- <p class="text-xs text-gray-400">未来赋能：企业级模型订阅</p> -->
+            </div>
+        </div>
+    </section>
+
+    <section id="traction" class="py-20 bg-slate-900 text-white px-6">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-4">赛道验证 & 初期成果</h2>
+            <p class="text-center text-gray-300 mb-12 max-w-2xl mx-auto">不是概念，而是已落地运行的商业成果</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-slate-800/50 p-8 rounded-xl border border-green-500/30">
+                    <div class="flex items-start gap-4 mb-6">
+                        <div class="w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-check-circle text-green-400 text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg mb-1">已落地项目</h3>
+                            <p class="text-green-400 text-sm">无锡钢铁行业</p>
+                        </div>
+                    </div>
+                    <div class="space-y-3 text-sm">
+                        <p class="text-gray-300"><span class="text-green-400 font-bold">✓ 生产线规格：</span> 1.5 米宽幅高速线</p>
+                        <p class="text-gray-300"><span class="text-green-400 font-bold">✓ 运行状态：</span> 24 小时不间断实运行</p>
+                        <p class="text-gray-300"><span class="text-green-400 font-bold">✓ 克服难题：</span> 污油干扰、光照不均、高频震动</p>
+                        <p class="text-gray-300"><span class="text-green-400 font-bold">✓ 业务影响：</span> 提升良率 +8%、降低人工 -60%</p>
+                    </div>
+                </div>
+
+                <div class="bg-slate-800/50 p-8 rounded-xl border border-blue-500/30">
+                    <div class="flex items-start gap-4 mb-6">
+                        <div class="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-rocket text-blue-400 text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg mb-1">产品成熟度</h3>
+                            <p class="text-blue-400 text-sm">AImage 平台</p>
+                        </div>
+                    </div>
+                    <div class="space-y-3 text-sm">
+                        <p class="text-gray-300"><span class="text-blue-400 font-bold">✓ 功能完整：</span> 标注 → 训练 → 部署 → 测试</p>
+                        <p class="text-gray-300"><span class="text-blue-400 font-bold">✓ 开发周期：</span> 最快 10 分钟部署，复杂场景 24h</p>
+                        <p class="text-gray-300"><span class="text-blue-400 font-bold">✓ 性能指标：</span> <45ms 延迟、60+ FPS 吞吐</p>
+                        <p class="text-gray-300"><span class="text-blue-400 font-bold">✓ 稳定性：</span> 工业级容错处理、24/7 可用</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="roadmap" class="py-20 max-w-7xl mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center mb-12">发展规划：从专项到平台</h2>
+        
+        <div class="relative">
+            <!-- 时间线背景 -->
+            <div class="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-blue-500 via-purple-500 to-orange-500 hidden md:block"></div>
+
+            <!-- 阶段1 -->
+            <div class="mb-12 md:mb-20">
+                <div class="md:flex items-center">
+                    <div class="md:w-1/2 text-right mr-0 md:mr-12">
+                        <div class="bg-blue-50 p-6 rounded-xl border border-blue-200">
+                            <span class="inline-block px-3 py-1 bg-blue-600 text-white text-sm font-bold rounded-full mb-3">短期 (0-12个月)</span>
+                            <h3 class="text-xl font-bold text-blue-900 mb-2">深耕钢铁场景</h3>
+                            <p class="text-sm text-gray-600">深耕无锡钢铁场景，打造标杆项目与可复用模型，建立先发优势。</p>
+                            <div class="mt-3 text-xs text-blue-700 space-y-1">
+                                <p>• 完成 3-5 个标杆项目</p>
+                                <p>• 积累行业专有数据 100+ 小时</p>
+                                <p>• 形成 15+ 钢铁细分模型</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hidden md:flex md:w-12 h-12 bg-blue-600 text-white rounded-full items-center justify-center absolute left-1/2 transform -translate-x-1/2 z-10 border-4 border-white shadow-lg">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <div class="md:w-1/2"></div>
+                </div>
+            </div>
+
+            <!-- 阶段2 -->
+            <div class="mb-12 md:mb-20">
+                <div class="md:flex items-center flex-row-reverse">
+                    <div class="md:w-1/2 text-left ml-0 md:ml-12">
+                        <div class="bg-purple-50 p-6 rounded-xl border border-purple-200">
+                            <span class="inline-block px-3 py-1 bg-purple-600 text-white text-sm font-bold rounded-full mb-3">中期 (1-3年)</span>
+                            <h3 class="text-xl font-bold text-purple-900 mb-2">多行业复制</h3>
+                            <p class="text-sm text-gray-600">在钢铁场景基础上复制方法论，拓展至其他制造行业。</p>
+                            <div class="mt-3 text-xs text-purple-700 space-y-1">
+                                <p>• 拓展至 3-5 个制造行业</p>
+                                <p>• 形成多行业垂直模型矩阵</p>
+                                <p>• 重点客户 10+ 家</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hidden md:flex md:w-12 h-12 bg-purple-600 text-white rounded-full items-center justify-center absolute left-1/2 transform -translate-x-1/2 z-10 border-4 border-white shadow-lg">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="md:w-1/2"></div>
+                </div>
+            </div>
+
+            <!-- 阶段3 -->
+            <div>
+                <div class="md:flex items-center">
+                    <div class="md:w-1/2 text-right mr-0 md:mr-12">
+                        <div class="bg-orange-50 p-6 rounded-xl border border-orange-200">
+                            <span class="inline-block px-3 py-1 bg-orange-600 text-white text-sm font-bold rounded-full mb-3">长期 (3年+)</span>
+                            <h3 class="text-xl font-bold text-orange-900 mb-2">工业 AI 生态</h3>
+                            <p class="text-sm text-gray-600">建设工业视觉垂直大模型能力，覆盖更多缺陷检测场景。</p>
+                            <div class="mt-3 text-xs text-orange-700 space-y-1">
+                                <p>• IndustryGPT 垂直大模型</p>
+                                <p>• 覆盖 50+ 细分场景</p>
+                                <p>• 形成平台化生态</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hidden md:flex md:w-12 h-12 bg-orange-600 text-white rounded-full items-center justify-center absolute left-1/2 transform -translate-x-1/2 z-10 border-4 border-white shadow-lg">
+                        <i class="fas fa-crown"></i>
+                    </div>
+                    <div class="md:w-1/2"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="scene" class="py-20 max-w-7xl mx-auto px-6">
+    <div class="text-center mb-16">
+        <h2 class="text-3xl font-bold text-gray-900 mb-4">从实验室原型到工业现场落地</h2>
+        <p class="text-gray-500">AImage 算法不仅在受控环境下表现卓越，更具备应对极端工业环境的稳定性。</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div class="group">
+            <div class="relative h-80 bg-gray-200 rounded-3xl mb-6 overflow-hidden shadow-lg border border-gray-100">
+                <img src="images\lab_setup.jpg" alt="实验台模拟" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex flex-col justify-end p-8">
+                    <span class="text-blue-400 font-bold text-sm mb-2">PHASE 01</span>
+                    <h4 class="text-white text-2xl font-bold">实验台模拟场景</h4>
+                </div>
+            </div>
+            <p class="text-gray-600 leading-relaxed px-2">
+                在受控光学环境下，对不同材质（钢铁、铝材、玻璃）进行算法极限验证，确保 AImage 在理论上能够捕捉所有类型的表面瑕疵。
+            </p>
+        </div>
+
+        <div class="group">
+            <div class="relative h-80 bg-blue-900 rounded-3xl mb-6 overflow-hidden shadow-2xl border border-blue-500/20">
+                <img src="images\project_site.jpg" alt="项目真实场景" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                <div class="absolute inset-0 bg-gradient-to-t from-blue-900/80 to-transparent flex flex-col justify-end p-8">
+                    <span class="text-green-400 font-bold text-sm mb-2">PHASE 02</span>
+                    <h4 class="text-white text-2xl font-bold">项目真实场景落地</h4>
+                </div>
+                <div class="absolute top-6 right-6">
+                    <span class="bg-green-500 text-white text-xs px-3 py-1 rounded-full animate-pulse">生产线实运行中</span>
+                </div>
+            </div>
+            <p class="text-gray-600 leading-relaxed px-2">
+                <b>实战验证：</b>部署于 1.5 米宽幅高速生产线，克服了现场震动、油污干扰及光照不均等挑战，实现了 24 小时不间断的自动化质检。
+            </p>
+        </div>
+    </div>
+</section>
+
+    <section id="cta" class="py-20 bg-gradient-to-r from-blue-600 to-blue-800 text-white px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">准备好加入工业 AI 革命了吗？</h2>
+            <p class="text-xl opacity-90 mb-8">让 AImage 成为你产线的"质检大脑"，在竞争中赢得先机</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="team.html" class="px-8 py-3 bg-white text-blue-600 font-bold rounded-lg hover:bg-gray-100 transition shadow-lg">了解核心团队</a>
+                <a href="#roadmap" class="px-8 py-3 border-2 border-white text-white font-bold rounded-lg hover:bg-white/10 transition">查看发展规划</a>
+            </div>
+            <p class="text-sm opacity-75 mt-6">常州粒夏智能科技有限公司 © 2026 | 致力于国产工业视觉检测的突破与落地</p>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-gray-400 py-12 text-center px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8 text-left">
+                <div>
+                    <h4 class="font-bold text-white mb-3">产品</h4>
+                    <p class="text-sm">AImage 工业视觉平台<br>完整的视觉检测解决方案</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white mb-3">服务覆盖</h4>
+                    <p class="text-sm">江苏无锡、苏州及周边制造业聚集区<br>7×24 技术支持</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white mb-3">核心优势</h4>
+                    <p class="text-sm">100% 自研国产算法<br>对标 Halcon 的工业级能力</p>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-8 text-center">
+                <p class="text-sm">© 2026 常州粒夏智能科技有限公司 - 创业大赛演示版</p>
+                <p class="text-xs mt-2">致力于用前沿技术重塑制造业质检标准</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
